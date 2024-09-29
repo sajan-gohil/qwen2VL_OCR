@@ -7,9 +7,9 @@ import base64
 from PIL import Image, ImageDraw
 from io import BytesIO
 import re
-from transformers import BitsAndBytesConfig
+# from transformers import BitsAndBytesConfig
 
-bnb_config = BitsAndBytesConfig(load_in_8bit=True)
+# bnb_config = BitsAndBytesConfig(load_in_8bit=True)
 
 # import pytesseract
 
@@ -17,7 +17,12 @@ model = Qwen2VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2-VL-7B-Instruct",
     torch_dtype="auto",
     device_map="auto",
-    quantization_config=bnb_config
+    # quantization_config=bnb_config
+)
+model = torch.quantization.quantize_dynamic(
+    model, 
+    {torch.nn.Linear},  # Quantize linear layers
+    dtype=torch.qint8  # Use 8-bit integer precision
 )
 
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
