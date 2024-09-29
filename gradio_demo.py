@@ -8,10 +8,7 @@ from PIL import Image, ImageDraw
 from io import BytesIO
 import re
 # from transformers import BitsAndBytesConfig
-
 # bnb_config = BitsAndBytesConfig(load_in_8bit=True)
-
-# import pytesseract
 
 model = Qwen2VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2-VL-7B-Instruct",
@@ -88,12 +85,6 @@ def run_example(image):
             clean_up_tokenization_spaces=False)
         print(output_text)
         return output_text
-
-
-# def extract_text_from_image(image_path):
-#     # Convert image to text using pytesseract
-#     text = pytesseract.image_to_string(Image.open(image_path))
-#     return text
 
 
 def highlight_text(input_text, keywords):
