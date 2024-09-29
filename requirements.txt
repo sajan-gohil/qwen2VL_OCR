@@ -3,7 +3,7 @@ Pillow==10.3.0
 Requests==2.31.0
 torch
 torchvision
-transformers
 git+https://github.com/huggingface/transformers.git@main
 accelerate==0.30.0
 qwen-vl-utils
+bitsandbytes
