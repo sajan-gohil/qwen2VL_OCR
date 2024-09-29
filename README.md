@@ -11,7 +11,9 @@ The task document mentioned using colpali, however, colpali is suitable for RAG 
 
 The uploaded image is passed to the vision language model with a prompt to return all the data. The generated data is displayed in the extracted text panel. When comma separated keywords are entered after extraction, on clicking the "Submit" button, the text with occurrences of keywords highlighted will be displayed in the Highlighted Text panel. This is done by identifying text segments matching keywords using regex.
 
-The deployment is on free CPU instance provided by huggingface and hence can take a long time (~1hour) and quantization using huggingface is not available for CPU. If needed, I can deploy on personal AWS instance/sagemaker.
+**NOTE**: The deployment is on free CPU instance provided by huggingface and hence can take a long time (~1hour) and quantization using huggingface is not available for CPU. If needed, I can deploy on personal AWS instance/sagemaker.
+The token limit is 1024 tokens.
+
 
 # Live demo URL:
 `https://huggingface.co/spaces/Sajan/QWEN2VL_OCR_demo`
