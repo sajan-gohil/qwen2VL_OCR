@@ -75,7 +75,7 @@ def run_example(image):
             padding=True,
             return_tensors="pt",
         )
-        inputs = inputs.to("cuda")
+        # inputs = inputs.to("cuda")
 
         generated_ids = model.generate(**inputs, max_new_tokens=1024)
         generated_ids_trimmed = [
