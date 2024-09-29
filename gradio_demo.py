@@ -29,6 +29,7 @@ processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
 
 
 def image_to_base64(image):
+    print("image = ", image, flush=True)
     buffered = BytesIO()
     image.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
@@ -42,6 +43,7 @@ def run_example(image):
     """
     global model
     global processor
+    print(model)
     model = model.eval()
     with torch.no_grad():
         system_prompt = "You are a helpfull assistant to read text in images. Read the text in the image verbatim."
@@ -83,7 +85,7 @@ def run_example(image):
             generated_ids_trimmed,
             skip_special_tokens=True,
             clean_up_tokenization_spaces=False)
-        # print(output_text)
+        print(output_text)
         return output_text
 
 
