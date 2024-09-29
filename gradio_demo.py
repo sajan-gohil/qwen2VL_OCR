@@ -19,11 +19,11 @@ model = Qwen2VLForConditionalGeneration.from_pretrained(
     device_map="auto",
     # quantization_config=bnb_config
 )
-model = torch.quantization.quantize_dynamic(
-    model, 
-    {torch.nn.Linear},  # Quantize linear layers
-    dtype=torch.qint8  # Use 8-bit integer precision
-)
+# model = torch.quantization.quantize_dynamic(
+#     model, 
+#     {torch.nn.Linear},  # Quantize linear layers
+#     dtype=torch.qint8  # Use 8-bit integer precision
+# )
 
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
 
