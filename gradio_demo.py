@@ -157,4 +157,4 @@ def create_interface():
 
 if __name__ == "__main__":
     app = create_interface()
-    app.launch(share=True, enable_queue=True)
+    app.launch(share=True)
