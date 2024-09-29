@@ -30,6 +30,7 @@ processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct")
 
 def image_to_base64(image):
     print("image = ", image, flush=True)
+    image = Image.open(image)
     buffered = BytesIO()
     image.save(buffered, format="PNG")
     img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
