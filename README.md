@@ -7,7 +7,6 @@ sdk_version: 4.44.0
 
 # Overview:
 This OCR extractor uses QWEN2-VL model from huggingface, specifically "Qwen/Qwen2-VL-7B-Instruct."
-The task document mentioned using colpali, however, colpali is suitable for RAG (retrieval augmented generation) which is not needed for OCR.
 
 The uploaded image is passed to the vision language model with a prompt to return all the data. The generated data is displayed in the extracted text panel. When comma separated keywords are entered after extraction, on clicking the "Submit" button, the text with occurrences of keywords highlighted will be displayed in the Highlighted Text panel. This is done by identifying text segments matching keywords using regex.
 
