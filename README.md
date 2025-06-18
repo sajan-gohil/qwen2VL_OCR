@@ -27,8 +27,9 @@ Deployment on huggingface spaces
 `gradio deploy`
 
 # Sample outputs:
-!(Sample Output)[8cbac8ffd68c24dd87a017ac152301da_output.png]
+Input:
+![Input Image](test_data/8cbac8ffd68c24dd87a017ac152301da.jpg)
 
 Output: ['Daily Conversations\n@englishwidsarah\n\nआज मैंने घर पर शांतिपूर्ण दिन बिताया।\nToday i spent a peaceful day at home.\n\nवे कड़ी मेहनत कर रहे हैं।\nThey are working hard.\n\nहमें आपकी सहायता की आवश्यकता है।\nWe need your help.\n\nहमें बस इतना ही चाहिए था।\nThat was all we needed.\n\nयह कैसा महसूस होता है।\nHow does it feel.']
 
-Sample output screenshot: 8cbac8ffd68c24dd87a017ac152301da_output.png
+![Output Sample](8cbac8ffd68c24dd87a017ac152301da_output.png)
